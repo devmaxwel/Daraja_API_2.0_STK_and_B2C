@@ -1,0 +1,103 @@
+.background {
+  display: flex;
+  justify-content: center;
+}
+
+.main_container {
+  width: 350px;
+  background: #fff;
+  height: 480px;
+  border-radius: 14px;
+  margin-top: 10px;
+}
+.options {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 10px;
+}
+.options span {
+  padding: 5px 20px;
+  background: rgb(226, 223, 223);
+  border-radius: 24px;
+}
+
+.options span:nth-child(1) {
+  background: green;
+  color: #fff;
+}
+.image_text {
+  display: flex;
+  margin-top: 30px;
+  margin: 10px;
+}
+.image_text img {
+  width: 150px;
+  height: 150px;
+}
+.error {
+  color: red;
+  font-weight: 100;
+  font-style: italic;
+  font-family: serif;
+}
+.form_inputs,
+.actions {
+  margin-top: 40px;
+  margin: 20px;
+}
+
+.input {
+  display: flex;
+  margin: 10px;
+  flex-direction: column;
+  border-bottom: 1px solid green;
+}
+.input label,
+.image_text p {
+  font-weight: 600;
+}
+.input input {
+  border: none;
+  outline: none;
+  padding: 10px;
+  background: none;
+}
+
+.actions button {
+  padding: 10px 30px;
+  background: green;
+  border-radius: 20px;
+  color: #fff;
+  font-weight: 600px;
+  animation-duration: 100ms;
+}
+.actions button:active {
+  scale: -90;
+}
+.actions button:hover {
+  box-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.1),
+    0 8px 10px -6px rgb(0 0 0 / 0.1);
+}
+.modal {
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.2);
+  border-radius: 6px;
+  background-color: white;
+  padding: 1rem;
+  text-align: center;
+  width: 30rem;
+  z-index: 10;
+  position: fixed;
+  top: 20vh;
+  left: calc(50% - 15rem);
+}
+
+.backdrop {
+  position: fixed;
+  z-index: 1;
+  background-color: rgba(0, 0, 0, 0.75);
+  width: 100%;
+  height: 100vh;
+  top: 0;
+  left: 0;
+}
+
