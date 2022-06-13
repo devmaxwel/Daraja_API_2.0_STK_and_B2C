@@ -21,7 +21,7 @@ function App() {
     
     await axios
       .post(
-        "http://localhost:4040/api/v2/stkpush",
+        "/api/v2/stkpush",
         {
           number: payment.number,
           amount: payment.amount,

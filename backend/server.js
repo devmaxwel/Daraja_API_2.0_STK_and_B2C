@@ -12,10 +12,10 @@ const callbackurl = require("./routers/callback_url");
 dotenv.config();
 
 const app = express();
+app.use(cors());
 app.use(express.json());
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
-app.use(cors());
 // -------------- API's START --------------------
 
 app.use("/api/v1/access_token", access_token);
