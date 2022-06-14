@@ -3,7 +3,6 @@ import axios from "axios";
 import Overlay from "./components/Overlay";
 import Modal from "./components/Modal";
 
-
 function App() {
   const [payment, setPayment] = useState({
     amount: "",
@@ -21,7 +20,7 @@ function App() {
     
     await axios
       .post(
-        "/api/v2/stkpush",
+        "/api/v2/stkpush_request",
         {
           number: payment.number,
           amount: payment.amount,
