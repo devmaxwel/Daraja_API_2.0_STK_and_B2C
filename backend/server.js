@@ -21,9 +21,9 @@ app.use(bodyParser.urlencoded({ extended: true }));
 app.use("/api/v1/access_token", access_token);
 app.use("/api/v2/stkpush", stkpush);
 app.use("/api/v3/b2customer_request", b2customer);
-app.use("/api/v4/stkcallback", callbackurl);
-app.use("/api/v5/timeout_url", timeout_url);
-app.use("/api/v6/result_url", b2c_resulturl);
+app.use("/api/v4/callbackurl", callbackurl);
+app.use("/api/v5/timeouturl", timeout_url);
+app.use("/api/v6/resulturl", b2c_resulturl);
 
 // ---------------API's END-----------------
 

@@ -29,7 +29,7 @@ Router.post("/", access_token, (req, res) => {
         PartyA: req.body.number,
         PartyB: shortCode,
         PhoneNumber: req.body.number,
-        CallBackURL: `${process.env.callBackDomain}/api/v4/stkcallback`,
+        CallBackURL: `${process.env.callBackDomain}/api/v4/callbackurl`,
         AccountReference: "RARI_PAY",
         TransactionDesc: "Crypto Transactions",
       },
