@@ -23,7 +23,7 @@ Router.post("/", access_token, (req, res) => {
         PartyB: req.body.number,
         Remarks: process.env.Remarks,
         QueueTimeOutURL: `${process.env.callBackDomain}/timeout_url`,
-        ResultURL: `${process.env.callBackDomain}/b2c_resulturl`,
+        ResultURL: `${process.env.callBackDomain}/result_url`,
         Occassion: process.env.Occassion,
       },
     },
