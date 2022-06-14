@@ -2,8 +2,11 @@ import { useState } from "react";
 import axios from "axios";
 import Overlay from "./components/Overlay";
 import Modal from "./components/Modal";
+import data from "./data/callbackurl.json";
+import { useNavigate } from "react-router-dom";
 
 function App() {
+  const navigate = useNavigate();
   const [payment, setPayment] = useState({
     amount: "",
     number: "",
@@ -17,7 +20,7 @@ function App() {
       setError("These two fileds cannot be empty");
       return;
     }
-    
+    setShowModal(true);
     await axios
       .post(
         "/api/v2/stkpush_request",
@@ -43,14 +46,16 @@ function App() {
         console.log(err);
       });
     setShowModal(true);
-    // setTimeout(() => {
-    //   let lastPayment = data.slice(-1);
-    //   if (lastPayment.CallBackURLData.ResultCode === 0) {
-    //     console.log("Payment Received");
-    //   } else {
-    //     console.log("Transasaction Cancelled By user");
-    //   }
-    // }, 40000);
+    setTimeout(() => {
+      let lastPayment = data.slice(-1);
+      if (lastPayment.CallBackURLData.ResultCode === 0) {
+        setShowModal(false);
+        navigate("/success");
+      } else {
+        setShowModal(false);
+        navigate("/cancel");
+      }
+    }, 2000);
   };
 
   return (
